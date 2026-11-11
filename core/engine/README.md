@@ -88,6 +88,11 @@ use zen_engine::ZEN_CONFIG;
 
 ZEN_CONFIG.function_memory_limit_bytes.store(64 * 1024 * 1024, Ordering::Relaxed);
 ```
+### Limits for expressions
+
+Decision tables, expression and switch nodes evaluate expressions with `zen-expression`, whose two global limits
+are re-exported here as `EXPRESSION_CONFIG` (`max_steps`, `max_interval_length`; default 0 = no limit). See the
+`zen-expression` README.
 
 ### Loaders
 
